@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Halaman Kontak</title>
-</head>
-<body>
+@extends('app')
 
-<h1>Informasi Kontak</h1>
+@section('content')
+<h2 class="text-2xl font-bold mb-4 text-center">Kontak Saya</h2>
 
-<p>Email : {{ $email }}</p>
-<p>No Telepon : {{ $telepon }}</p>
-<p>Alamat : {{ $alamat }}</p>
+<form class="space-y-4">
+    <input type="text" placeholder="Nama"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none">
 
-<a href="/">Home</a>
-<a href="/profil">Profil</a>
+    <input type="email" placeholder="Email"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none">
 
-</body>
-</html>
+    <textarea placeholder="Pesan"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
+
+    <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+        Kirim Pesan
+    </button>
+</form>
+@endsection
